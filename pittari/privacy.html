@@ -14,7 +14,7 @@
   <p class="lead">ぴったり証明写真（以下「本アプリ」）</p>
 
   <div class="box">
-    <p><strong>まとめ：</strong>本アプリは、写真や個人の情報を集めません。写真の処理はすべてお使いの iPhone の中で行い、開発者や第三者に送ることはありません。</p>
+    <p><strong>まとめ：</strong>本アプリは、写真や個人の情報を集めません。写真の処理はすべてお使いの iPhone の中で行い、開発者や第三者に送ることはありません。顔を測った値（顔のデータ）は保存せず、写真を仕上げ終えると消えます。</p>
   </div>
 
   <h2>1. 集める情報</h2>
@@ -28,31 +28,52 @@
     <li>利用者が「写真」への保存や共有を選んだときだけ、その画像が「写真」アプリや共有先へ渡ります。共有先での扱いは、それぞれのサービスの方針に従います。</li>
   </ul>
 
-  <h2>3. 使う権限</h2>
+  <h2 id="face-data">3. 顔のデータ（Face data）</h2>
+  <p>本アプリは、証明写真を規格の大きさに切り取るために、Apple の Vision フレームワークを使って、iPhone の中で写真の中の顔を測ります。</p>
+  <ul>
+    <li><strong>測るもの</strong>：顔の枠（位置と大きさ）、顔の輪郭の点（あごの位置を知るため）、顔の傾きと向き、人と背景の境目（頭のてっぺんと背景を調べるため）。</li>
+    <li><strong>使い道</strong>：写真を切り取る位置を決めることと、規格に合っているか（顔の大きさ・傾き・背景）を確かめることだけに使います。人を見分ける（顔認証・本人確認）ことには使いません。</li>
+    <li><strong>保存</strong>：測った値は、写真を仕上げている間（撮る・調整・保存の画面）だけ iPhone のメモリーの中に置き、ホームの画面に戻るかアプリを終えると消えます。ファイルにも端末の外にも保存しません。</li>
+    <li><strong>送信・第三者への提供</strong>：顔のデータを開発者や第三者に送ることはありません。サーバー・広告・アクセス解析・AI のサービスは使っていません。</li>
+    <li><strong>保存期間と削除</strong>：顔のデータは保存しないため、保存期間はありません。仕上がった写真（画像そのもの）は「2. 写真の扱い」のとおり端末の中だけに保存し、ホームの一覧から、または本アプリを削除することで消せます。</li>
+  </ul>
+  <div lang="en">
+  <p><strong>Face data (English)</strong></p>
+  <p>To crop ID photos to the official size, the app uses Apple's Vision framework on the device to measure the face in the photo.</p>
+  <ul>
+    <li><strong>What is measured</strong>: the face bounding box (position and size), face contour points (to find the chin), face tilt and angle, and a person/background mask (to find the top of the head and check the background).</li>
+    <li><strong>Use</strong>: only to decide where to crop the photo and to check that it meets the size rules (face size, tilt and background). It is never used to identify or authenticate a person.</li>
+    <li><strong>Storage</strong>: these measurements exist only in the device's memory while the user is finishing the photo (the capture, adjustment and save screens), and are discarded when the user returns to the home screen or the app quits. They are never written to a file and never leave the device.</li>
+    <li><strong>Sharing</strong>: face data is never sent to the developer or to any third party. The app has no server, advertising, analytics or AI services.</li>
+    <li><strong>Retention and deletion</strong>: face data is not stored, so there is no retention period. The finished photo itself is stored only on the device as described in Section 2, and the user can delete it from the list on the home screen or by deleting the app.</li>
+  </ul>
+  </div>
+
+  <h2>4. 使う権限</h2>
   <ul>
     <li><strong>カメラ</strong>：証明写真を撮るために使います。</li>
     <li><strong>写真への追加</strong>：印刷用の画像を「写真」に保存するために使います。写真を読み取る権限は求めません（写真を選ぶときは、iOS の写真の選択画面を使います）。</li>
   </ul>
 
-  <h2>4. アプリ内の購入</h2>
+  <h2>5. アプリ内の購入</h2>
   <p>購入の手続きは Apple の App Store が行います。開発者はお支払いの情報（カード番号など）を受け取りません。購入の状態の確認には Apple の StoreKit を使います。Apple による情報の扱いは、<a href="https://www.apple.com/jp/legal/privacy/">Apple のプライバシーポリシー</a>をご覧ください。</p>
 
-  <h2>5. 第三者への提供</h2>
+  <h2>6. 第三者への提供</h2>
   <p>集める情報がないため、第三者へ提供することはありません。</p>
 
-  <h2>6. お問い合わせで受け取る情報</h2>
+  <h2>7. お問い合わせで受け取る情報</h2>
   <p>メールでお問い合わせいただいた場合、お名前（書かれた場合）・メールアドレス・お問い合わせの内容を、お返事のためだけに使います。</p>
 
-  <h2>7. お子さまの利用</h2>
+  <h2>8. お子さまの利用</h2>
   <p>本アプリは年齢に関係なく使えますが、どなたの情報も集めません。</p>
 
-  <h2>8. このポリシーの変更</h2>
+  <h2>9. このポリシーの変更</h2>
   <p>内容を変えるときは、このページで知らせます。大きな変更（情報を集めるようになる等）がある場合は、アプリの更新内容でもお知らせします。</p>
 
-  <h2>9. お問い合わせ先</h2>
+  <h2>10. お問い合わせ先</h2>
   <p>Algorist<br>メール：<a href="mailto:algorist.dev@gmail.com">algorist.dev@gmail.com</a></p>
 
-  <p class="meta">制定日：2026年10月5日</p>
+  <p class="meta">制定日：2026年10月5日<br>改定日：2026年10月7日（顔のデータの項目を追加）</p>
 </div></main>
 <footer><div class="wrap">© 2026 Algorist ・ <a href="/pittari/">サポート</a></div></footer>
 </body>
